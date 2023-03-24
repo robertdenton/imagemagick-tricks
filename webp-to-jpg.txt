@@ -1,0 +1,17 @@
+# If you don't have imagemagick downloaded then
+# brew install imagemagick 
+# This could take a minute
+
+# Create a directory
+mkdir ~/Desktop/test/
+# Add all your .webp files to that directory
+cd ~/Desktop/test/
+for file in *.webp
+  magick $file ${file//.webp/.jpg}
+# and you should have a bunch of jpgs
+
+# Notes:
+# Shout out to Jon Keegan for first teaching me about ImageMagick at #NICAR16
+# ImageMagick webp to jpg conversion: https://stackoverflow.com/a/49592591
+# Unix for loop: https://www.cyberciti.biz/faq/unix-loop-through-files-in-a-directory/
+# String substitution: https://stackoverflow.com/a/13210909
